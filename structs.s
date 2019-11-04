@@ -5,9 +5,9 @@
 set_val:
 	jmp	.L2
 .L3:
-	movslq	24(%rdi), %rax
-	movl	%esi, 8(%rdi,%rax,4)
-	movq	(%rdi), %rdi
+	movslq	12(%rdi), %rax
+	movl	%esi, (%rdi,%rax,4)
+	movq	16(%rdi), %rdi
 .L2:
 	testq	%rdi, %rdi
 	jne	.L3
